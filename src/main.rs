@@ -5,16 +5,14 @@ fn main()
    let mut s = String::new();
    std::io::stdin().read_line(&mut s).unwrap();
 
-   //let goal: String = String::from("21");
+   let goal:&str = "21";
 
-   let banana: &str = "banana";
-   if banana == "banana"{
-      println!("bruh");
-   }
-
-   if s.eq(goal){
+   if &s == goal
+   {
    	println!("Banger");
-   }else{
+   }
+   else 
+   {
    	println!("You stoopid.");
    }
 }
