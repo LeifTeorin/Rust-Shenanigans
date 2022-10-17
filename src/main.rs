@@ -5,9 +5,14 @@ fn main()
    let mut s = String::new();
    std::io::stdin().read_line(&mut s).unwrap();
 
-   let goal:&str = "21";
+   //dude wtf
+   let num:i32 = s.parse();
+   let goal:i32 = 21;
 
-   if &s == goal
+   println!("{}", goal);
+   println!("{}", num);
+
+   if num == goal
    {
    	println!("Banger");
    }
