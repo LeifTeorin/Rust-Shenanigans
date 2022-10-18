@@ -1,18 +1,16 @@
+use std::io;
+
 fn main()
 {
    println!("What's 9 + 10?");
 
    let mut s = String::new();
-   std::io::stdin().read_line(&mut s).unwrap();
+   io::stdin()
+      .read_line(&mut s)
+      .expect("failed to read line");
 
-   //dude wtf
-   let num:i32 = s.parse();
-   let goal:i32 = 21;
-
-   println!("{}", goal);
-   println!("{}", num);
-
-   if num == goal
+   
+   if s.trim() == "21"
    {
    	println!("Banger");
    }
